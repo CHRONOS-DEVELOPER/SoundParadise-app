@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Paradise</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        window.sessionUser = JSON.parse(sessionStorage.getItem("sessionUser"));
+        //document.writeln("seu usuário é: " + sessionUser.user);
+        //document.writeln("<br>sua senha é: " + sessionUser.password);
+    </script>
+    <style>
+        body {
+            cursor: default;
+            width: 99vw;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        #mainScreen {
+            height: 100vh;
+        }
+        
+        .form-control {
+            width: 21vw;
+            margin: 3vh auto;
+        }
+        
+        #bemvindo {
+            text-align: end;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainScreen" class="row ">
+        <div id="menu" class="col-3 bg-primary">
+            <input class="form-control form-control-lg" id="SearchMusic" type="text" placeholder="Pesquisar">
+        </div>
+        <div id="Screen" class="col-9 bg-secondary" onfocus="ShowUser()">
+
+        </div>
+    </div>
+</body>
+<script>
+    window.Screenmain = document.getElementById("Screen");
+</script>
+<script src="indexPage.js"></script>
+
+</html>

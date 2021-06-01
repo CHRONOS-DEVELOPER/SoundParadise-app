@@ -1,0 +1,20 @@
+{
+    "name": "soundparadise",
+    "version": "1.0.0",
+    "description": "Sound Paradise",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron ."
+    },
+    "author": "CHRONOS",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^12.0.1"
+    },
+    "dependencies": {
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.6.0",
+        "popper.js": "^1.16.1"
+    }
+}
