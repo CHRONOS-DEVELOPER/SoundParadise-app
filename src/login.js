@@ -39,8 +39,13 @@ if (localStorage.Music) {
 
 function CreateUserPage() {
 
-    createPage.innerHTML = "<h1 class='text-primary'>SOUND PARADISE</h1><br><h2>CADASTRE-SE</h2><br><input class='form-control form-control-lg' type='email' id='EMAIL' placeholder='INSIRA SEU EMAIL'><input class='form-control form-control-lg' type='email' id='USER' placeholder='INSIRA SEU NOME DE USUÀRIO'><input class='form-control form-control-lg' type='cpf' id='CPF' oninput='mascara(this)' placeholder='INSIRA SEU CPF'><input class='form-control form-control-lg' type='password' id='PASSWORD' placeholder='INSIRA SUA SENHA' ><button class='btn btn-primary btn-block' onclick='CreateUser()'> CRIAR USUÁRIO</button> <a href='login.html' class='btn btn-danger btn-block'> VOLTAR </a>"
+    createPage.innerHTML = "<h1 class='text-primary'>SOUND PARADISE</h1><br><h2>CADASTRE-SE</h2><br><input class='form-control form-control-lg' type='email' id='EMAIL' placeholder='INSIRA SEU EMAIL'><input class='form-control form-control-lg' type='email' id='USER' placeholder='INSIRA SEU NOME DE USUÀRIO'><input class='form-control form-control-lg' type='cpf' id='CPF' oninput='mascara(this)' placeholder='INSIRA SEU CPF'><input class='form-control form-control-lg' type='password' id='PASSWORD' placeholder='INSIRA SUA SENHA' ><button class='btn btn-primary btn-block' onclick='CreateUser()'> CRIAR USUÁRIO</button> <button onclick='loginpage()' class='btn btn-danger btn-block'> VOLTAR </button>"
 
+}
+
+function loginpage() {
+
+    createPage.innerHTML = "<h1 class='text-primary'>SOUND PARADISE</h1><br><h2>LOGIN</h2><br><input class='form-control form-control-lg' type='email' id='EMAIL' placeholder='INSIRA SEU EMAIL'><input class='form-control form-control-lg' type='password' id='PASSWORD' placeholder='INSIRA SUA SENHA'><button class='btn btn-primary btn-block' onclick='Login()'>LOGIN</button><button class='btn btn-danger btn-block' onclick='CreateUserPage()'> CRIAR USUÁRIO</button>"
 
 }
 
