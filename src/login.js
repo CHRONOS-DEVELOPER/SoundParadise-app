@@ -2,34 +2,87 @@ if (localStorage.Music) {
     console.log("LOAD DATABASE SUCCESSFUL")
 } else {
     var db = {
-        gêneros: {
-            "Axé": [],
-            "Blues": [],
-            "Country": [],
-            "Eletrônica": [],
-            "Forró": [],
-            "Funk": [],
-            "Gospel": [],
-            "Hip Hop": [],
-            "Jazz": [],
-            "MPB": [],
-            "Música clássica": [],
-            "Pagode": [],
-            "Pop": [],
-            "Rap": [],
-            "Reggae": [],
-            "Rock": [],
-            "Samba": [],
-            "Sertanejo": []
+        gender: {
+            "Axé": {
+                "authors": [],
+                "songs": []
+            },
+            "Blues": {
+                "authors": [],
+                "songs": []
+            },
+            "Country": {
+                "authors": [],
+                "songs": []
+            },
+            "Eletrônica": {
+                "authors": [],
+                "songs": []
+            },
+            "Forró": {
+                "authors": [],
+                "songs": []
+            },
+            "Funk": {
+                "authors": [],
+                "songs": []
+            },
+            "Gospel": {
+                "authors": [],
+                "songs": []
+            },
+            "Hip Hop": {
+                "authors": [],
+                "songs": []
+            },
+            "Jazz": {
+                "authors": [],
+                "songs": []
+            },
+            "MPB": {
+                "authors": [],
+                "songs": []
+            },
+            "Música clássica": {
+                "authors": [],
+                "songs": []
+            },
+            "Pagode": {
+                "authors": [],
+                "songs": []
+            },
+            "Pop": {
+                "authors": [],
+                "songs": []
+            },
+            "Rap": {
+                "authors": [],
+                "songs": []
+            },
+            "Reggae": {
+                "authors": [],
+                "songs": []
+            },
+            "Rock": {
+                "authors": [],
+                "songs": []
+            },
+            "Samba": {
+                "authors": [],
+                "songs": []
+            },
+            "Sertanejo": {
+                "authors": [],
+                "songs": []
+            }
         },
-        artistas: {
+        authors: {
 
         },
-        musicas: {
+        songs: {
 
 
-        },
-        cont: 0
+        }
 
 
     }
@@ -132,4 +185,3 @@ function Login() {
         alert("POR FAVOR DIGITE UM EMAIL E UMA SENHA VALIDA")
     }
 }
-//OLÁ

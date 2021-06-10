@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do ADIMINISTRADOR</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <style>
@@ -22,26 +23,27 @@
             height: 100vh;
         }
         
-        .form-control {
-            width: 21vw;
-            margin: 3vh auto;
-        }
-        
         #bemvindo {
             text-align: end;
             color: whitesmoke;
         }
         
-        .text-white {
+        .white {
             text-align: center;
             font-family: 'Chango', cursive;
             font-size: 1.9vw;
         }
         
-        .text-primary {
+        .lg {
             text-align: center;
             font-family: 'Chango', cursive;
             font-size: 4vw;
+        }
+        
+        .sm {
+            text-align: center;
+            font-family: 'Chango', cursive;
+            font-size: 3vw;
         }
         
         .btn-block {
@@ -53,17 +55,17 @@
 <body>
     <div id="mainScreen" class="row ">
         <div id="menu" class="col-3 bg-primary">
-            <h1 class="text-white">Página do ADIMINISTRADOR</h1>
+            <h1 class="text-white white">Página do ADIMINISTRADOR</h1>
             <br>
             <button class="btn btn-info btn-lg btn-block" onclick="ADDaDVD()">Adicinar DVD</button>
-            <button class="btn btn-info btn-lg btn-block">Consultar lista de DVDs</button>
-            <button class="btn btn-info btn-lg btn-block">....</button>
+            <button class="btn btn-info btn-lg btn-block" onclick="SEARCHaDVD()">Consultar lista de DVDs</button>
+            <button class="btn btn-info btn-lg btn-block">Cadastrar Autor</button>
             <button class="btn btn-info btn-lg btn-block">....</button>
             <button class="btn btn-info btn-lg btn-block">....</button>
         </div>
         <div id="Screen" class="col-9 bg-secondary">
 
-            <h1 class="text-primary">Sound Paradise</h1>
+            <h1 class="text-primary lg">Sound Paradise</h1>
 
         </div>
     </div>
