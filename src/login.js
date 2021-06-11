@@ -74,15 +74,19 @@ if (localStorage.Music) {
             "Sertanejo": {
                 "authors": [],
                 "songs": []
+            },
+            "Pisadinha": {
+                "authors": [],
+                "songs": []
             }
         },
-        authors: {
 
-        },
-        songs: {
+        songs: [
+            { "name": "name", "author": "author", "gender": "gender" }
+        ]
 
 
-        }
+
 
 
     }

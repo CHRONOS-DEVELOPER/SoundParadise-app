@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do ADIMINISTRADOR</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <audio src="resources/sounds/errorSound.mp3"></audio>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
@@ -57,15 +57,15 @@
         <div id="menu" class="col-3 bg-primary">
             <h1 class="text-white white">Página do ADIMINISTRADOR</h1>
             <br>
-            <button class="btn btn-info btn-lg btn-block" onclick="ADDaDVD()">Adicinar DVD</button>
+            <button class="btn btn-info btn-lg btn-block" onclick="REGISTaDVD()">Adicinar DVD</button>
             <button class="btn btn-info btn-lg btn-block" onclick="SEARCHaDVD()">Consultar lista de DVDs</button>
-            <button class="btn btn-info btn-lg btn-block">Cadastrar Autor</button>
+            <button class="btn btn-info btn-lg btn-block" onclick="REGISTaAUTHOR()">Cadastrar CANTOR</button>
             <button class="btn btn-info btn-lg btn-block">....</button>
             <button class="btn btn-info btn-lg btn-block">....</button>
         </div>
         <div id="Screen" class="col-9 bg-secondary">
 
-            <h1 class="text-primary lg">Sound Paradise</h1>
+            <h1 class="text-info lg">Sound Paradise</h1>
 
         </div>
     </div>
@@ -73,7 +73,9 @@
 <script>
     window.Screenmain = document.getElementById("Screen");
     window.Screenmenu = document.getElementById("menu");
+    window.audio = document.querySelector('audio');
 </script>
 <script src="adminPage.js"></script>
+
 
 </html>
