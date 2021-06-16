@@ -52,20 +52,44 @@ function ADDaAUTHORlist() {
 
 }
 
-function SEARCHaDVD() {
 
-    Screenmain.innerHTML = "<h1 class='text-info lg'>Sound Paradise</h1> <br/><h1 class='text-info sm'> Consultar Música</h1> <br/> <br/><input type='text' class='form-control form-control-lg' id='MusicName' placeholder='NOME DA MUSICA'><button class='btn btn-block btn-info' onclick='SEARCHallDVD()'>LISTA COMPLETA DE DVDs</button><select class='form-control form-control-lg' onclick='ADDaAUTHORlist()' id='MusicGender'><option>SELECIONE O GÊNERO</option></select><button class='btn btn-block btn-info' onclick='SEARCHallDVD()'>LISTA COMPLETA DE DVDs</button><select class='form-control form-control-lg' id='MusicAuthor'><option>SELECIONE O CANTOR</option></select><button class='btn btn-block btn-info' onclick='SEARCHthisDVD()'>PESQUISAR DVD</button><button class='btn btn-block btn-info' onclick='SEARCHallDVD()'>LISTA COMPLETA DE DVDs</button>"
-    ADDaGENDERlist()
+
+var SEARCHthisDVD = {
+
+    "SearchName": function() {
+        var MusicAuthor = document.getElementById('MusicAuthor').value;
+        var MusicGender = document.getElementById('MusicGender').value;
+        var MusicName = document.getElementById('MusicName').value;
+
+        if (MusicName != "") {
+
+        }
+    },
+    "SearchGender": function() {
+        var MusicAuthor = document.getElementById('MusicAuthor').value;
+        var MusicGender = document.getElementById('MusicGender').value;
+        var MusicName = document.getElementById('MusicName').value;
+
+        if (MusicGender != "SELECIONE O GÊNERO") {
+
+        }
+    },
+    "SearchAuthor": function() {
+        var MusicAuthor = document.getElementById('MusicAuthor').value;
+        var MusicGender = document.getElementById('MusicGender').value;
+        var MusicName = document.getElementById('MusicName').value;
+
+        if (MusicAuthor != "SELECIONE O CANTOR") {
+
+        }
+    }
 
 }
 
-function SEARCH() {
-    var MusicAuthor = document.getElementById('MusicAuthor').value;
-    var MusicGender = document.getElementById('MusicGender').value;
-    var MusicName = document.getElementById('MusicName').value;
-    if (MusicName != "" && MusicGender != "" && MusicAuthor != "") {
+function SEARCHaDVD() {
 
-    }
+    Screenmain.innerHTML = "<h1 class='text-info lg'>Sound Paradise</h1> <br/><h1 class='text-info sm'> Consultar Música</h1> <br/> <br/><input type='text' class='form-control form-control-lg' id='MusicName' placeholder='NOME DA MUSICA'><button class='btn  btn-info' onclick='SEARCHthisDVD.SearchName()'>PESQUISAR POR NOME</button><br/><br/><select class='form-control form-control-lg' id='MusicGender'><option>SELECIONE O GÊNERO</option></select><button class='btn  btn-info' onclick='SEARCHthisDVD.SearchGender()'>PESQUISAR POR GÊNERO</button><br/><br/><select class='form-control form-control-lg' id='MusicAuthor'><option>SELECIONE O CANTOR</option></select><button class='btn btn-info' onclick='SEARCHthisDVD.SearchAuthor()'>PESQUISAR POR AUTOR</button><button class='btn btn-block btn-info' onclick='SEARCHthisDVD.SearchAll()'>LISTA COMPLETA DE DVDs</button>"
+    ADDaGENDERlist()
 
 }
 
@@ -81,6 +105,7 @@ function ADDaAuthor() {
     if (AuthorName != "" && GenderName != "") {
         if (Music.gender[GenderName].authors.indexOf(AuthorName) == -1) {
             Music.gender[GenderName].authors.push(AuthorName);
+            Music.authors.push(AuthorName);
             localStorage.Music = JSON.stringify(Music);
             audio.play();
             alert("CANTOR " + AuthorName + " ADICIONADO AO GÊNERO: " + GenderName + " COM SUCESSO!")
