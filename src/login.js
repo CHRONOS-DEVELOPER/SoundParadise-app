@@ -83,7 +83,8 @@ if (localStorage.Music) {
 
         songs: [
             { "name": "name", "author": "author", "gender": "gender" }
-        ]
+        ],
+        authors: []
 
 
 
