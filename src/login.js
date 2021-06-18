@@ -84,7 +84,15 @@ if (localStorage.Music) {
         songs: [
             { "name": "name", "author": "author", "gender": "gender" }
         ],
-        authors: []
+        authors: [],
+        payment: [{ "nameMusic": "leticia", "data": "18/06/2021", "nameUser": "José Sávio" },
+            { "nameMusic": "Letícia", "data": "18/06/2021", "nameUser": "José Sávio" },
+            { "nameMusic": "Não Era Amor", "data": "18/06/2021", "nameUser": "Pedro Augusto" },
+            { "nameMusic": "Volta Comigo BB", "data": "18/06/2021", "nameUser": "Victor Hugo" },
+            { "nameMusic": "Beliver", "data": "18/06/2021", "nameUser": "Joyce" },
+            { "nameMusic": "Teste", "data": "18/06/2021", "nameUser": "Teste" },
+            { "nameMusic": "teste", "data": "18/06/2021", "nameUser": "teste" }
+        ]
 
 
 

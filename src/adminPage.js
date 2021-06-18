@@ -160,6 +160,43 @@ function ADDaAuthor() {
     }
 }
 
+function NewGender() {
+    Screenmain.innerHTML = "<h1 class='text-info lg'>Sound Paradise</h1> <br/><h1 class='text-info sm'> Adicionar Gênero </h1> <br/> <br/><input type='text' class='form-control form-control-lg' id='GenderName' placeholder='NOME DO GÊNERO'><button class='btn btn-block btn-info' onclick='ADDGender()'>ADICIONAR GÊNERO</button>"
+}
+
+function ADDGender() {
+
+    GenderName = document.getElementById("GenderName").value;
+    if (Music.gender[GenderName]) {
+        audio.play()
+        alert("Gênero Existente")
+
+    } else if (GenderName != "") {
+        var Completer = {
+            "authors": [],
+            "songs": []
+        }
+        Music.gender[GenderName] = Completer
+        localStorage.Music = JSON.stringify(Music)
+        audio.play()
+        alert("Gênero " + GenderName + " adicionado com Sucesso!")
+        NewGender()
+    } else {
+        audio.play()
+        alert("Valor Invalido")
+    }
+}
+
+function ListPayments() {
+    Screenmain.innerHTML = "<h1 class='text-info lg'>Sound Paradise</h1> <br/><h1 class='text-info sm'> Compras Efetuadas</h1> <br/> <br/><div class='table-overflow'><table class='table table-lg table-striped table-dark'><thead><tr><th scope = 'col'>ID#</th><th scope = 'col'>Nome da Música</th><th scope = 'col'>Data da Compra</th><th scope = 'col'>Comprador</th></tr></thead><tbody id='tablebody'></tbody></table>"
+    Music.payment.forEach((item, indice) => {
+
+
+        $('#tablebody').append("<tr><th scope='row' id='tableid'>" + indice + "</th><td id='tablename'>" + item.nameMusic + "</td><td id='tableauthor'>" + item.data + "</td><td id='tablegender'>" + item.nameUser + "</td></tr>")
+
+
+    });
+}
 
 
 
